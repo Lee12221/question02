@@ -1,0 +1,116 @@
+@charset "utf-8";
+*{margin: 0; padding: 0;}
+li{list-style: none;}
+a{
+    text-decoration: none;
+    display: block;
+    color: #333;
+    transition: .3s;
+}
+img{display: block;}
+
+#wrap{width: 1200px; margin: 0 auto;}
+#header{height: 100px; display: flex;}
+#slide{height: 300px;background: #ddd;}
+#contents{height: 200px; background: #ffffff;}
+#footer{height: 100px; background: #bbb;}
+
+.logo{padding-top: 60px;}
+nav{width: 1000px;}
+
+.sub{display: none;}
+/*.gnb:hover .sub{display: block;}*/
+.gnb>li>a{font-weight: bold;}
+.gnb a{width: 150px; text-align: center;
+line-height: 40px;
+}
+.sub a{color: #000000;
+    line-height:40px;
+font-size:15px ;}
+.gnb{
+    font-size: 20px;
+    display: flex;
+    width: 600px;
+    position:relative; 
+    left:380px; top: 60px;
+    z-index: 10;}
+
+.nav_back{
+    height: 180px;background:#ffffff;
+    position: absolute;
+    width: 1200px;
+    display: none;
+}
+
+.gnb li:hover > a{
+    background: #ffffff;
+    color: #2b872f;
+}
+.sub > li:hover >a{
+    background: #ffffff;color: #2b872f;
+}
+
+#slide{overflow: hidden;}
+#slide ul{
+    display: flex;
+    width: 400%;
+    animation: slide 9s infinite;
+}
+@keyframes slide{
+    0%{margin-left: 0;}
+    33%{margin-left:-100%;}
+    66%{margin-left:-200%;}
+    100%{margin-left:-300%;}
+}
+#contents{display: flex;}
+#contents section{
+    padding: 10px;
+    width: 380px;
+}
+.title{
+    line-height: 30px;
+    text-align: center;
+    outline: 1px #777 solid;
+}
+
+.notice a{
+    line-height: 30px;
+    display: flex;
+}
+.notice a:hover{background: #eee;}
+.num{width: 20px;}
+
+.gallery img{width: 120px;}
+.gallery{
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.gallery a:hover{opacity: .8;}
+
+.banner img{width: 90px;}
+
+.banner{
+    height: 150px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+}
+
+/*.banner li:nth-child(2){
+    width: 230px;
+}*/
+.banner a:hover img{display: .8;}
+.banner a:hover {text-decoration: underline;}
+
+#footer{display: flex;
+justify-content: space-between;
+align-items: center;}
+
+.f_logo{filter: grayscale(1);}
+.family{
+    padding-right: 20px;
+}
+.family select{width: 120px; height: 20px;}
